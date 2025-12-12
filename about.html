@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About E Keys Creative Web Design | Small Business Web Design in Sacramento</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO meta -->
+  <meta
+    name="description"
+    content="Learn about E Keys Creative Web Design, a small studio run by Elijah Keys that builds custom websites and SEO setup for small businesses in Sacramento, San Jose and Chico."
+  />
+  <meta
+    name="keywords"
+    content="about web designer, small business web design studio, Sacramento web design, Chico web design, San Jose web designer, custom websites, SEO setup"
+  />
+  <link rel="canonical" href="https://ekeyswebdesigns.com/about" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="About E Keys Creative Web Design | Small Business Web Design in Sacramento"
+  />
+  <meta
+    property="og:description"
+    content="Meet Elijah Keys and learn how E Keys Creative Web Design helps small businesses in Sacramento, San Jose and Chico with clean, custom websites and SEO."
+  />
+  <meta property="og:url" content="https://ekeyswebdesigns.com/about" />
+  <meta property="og:image" content="https://ekeyswebdesigns.com/og-image.jpg" />
+
+  <!-- About page schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About E Keys Creative Web Design",
+    "url": "https://ekeyswebdesigns.com/about",
+    "about": {
+      "@type": "LocalBusiness",
+      "name": "E Keys Creative Web Design",
+      "description": "Small web design studio creating custom websites and SEO setup for small businesses in Sacramento, San Jose and Chico.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sacramento",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "Place", "name": "Sacramento, CA" },
+        { "@type": "Place", "name": "San Jose, CA" },
+        { "@type": "Place", "name": "Chico, CA" }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Elijah Keys",
+        "jobTitle": "Owner and web designer"
+      }
+    }
+  }
+  </script>
+</head>
+
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #111827;
+      background-color: #f9fafb;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+
+    .site-header {
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .site-header-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+
+    .site-logo {
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+.site-logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.logo-main {
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #111827;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.logo-main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+  height: 2px;
+  background-color: #4ade80;
+  border-radius: 999px;
+}
+
+.logo-tagline {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+    .site-nav .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    .site-nav .nav-links a {
+      text-decoration: none;
+      color: #4b5563;
+      font-weight: 500;
+    }
+
+    .site-nav .nav-links a:hover {
+      color: #111827;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      background: #4ade80;
+      color: white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+      transition:
+        transform 0.18s ease-out,
+        box-shadow 0.18s ease-out;
+      border: none;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.06);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.45);
+    }
+
+    .header-contact-btn {
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 640px) {
+      .site-nav .nav-links {
+        display: none;
+      }
+
+      .site-header-inner {
+        padding: 12px 16px;
+      }
+
+      .header-contact-btn {
+        font-size: 12px;
+        padding: 8px 14px;
+      }
+    }
+
+    /* About page layout */
+
+    .about-main {
+      flex: 1;
+      padding: 40px 16px 56px;
+      background: #f3f4f6;
+    }
+
+    .about-hero {
+      max-width: 1040px;
+      margin: 0 auto 40px;
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 32px 32px 28px;
+      box-sizing: border-box;
+      box-shadow: 0 18px 50px rgba(15,23,42,0.12);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .about-copy {
+      flex: 1 1 320px;
+    }
+
+    .about-eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #4ade80;
+      margin-bottom: 8px;
+    }
+
+    .about-title {
+      font-size: 30px;
+      margin: 0 0 14px;
+      color: #111827;
+    }
+
+    .about-text {
+      margin: 0 0 10px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #4b5563;
+      max-width: 640px;
+    }
+
+    .about-photo {
+      flex: 1 1 260px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-photo img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 24px;
+      box-shadow: 0 18px 50px rgba(15,23,42,0.22);
+      object-fit: cover;
+    }
+
+    .about-section {
+      max-width: 1040px;
+      margin: 0 auto 32px;
+    }
+
+    .about-section-title {
+      font-size: 20px;
+      margin: 0 0 14px;
+      color: #111827;
+    }
+
+    .about-section-text {
+      margin: 0 0 18px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #4b5563;
+      max-width: 720px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .about-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: 0 12px 32px rgba(15,23,42,0.08);
+    }
+
+    .about-card-title {
+      margin: 0 0 6px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .about-card-text {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+    .about-tagline {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 768px) {
+      .about-hero {
+        padding: 24px 20px;
+      }
+
+      .about-photo {
+        order: -1;
+      }
+    }
+
+    .footer {
+      padding: 24px;
+      font-size: 13px;
+      color: #6b7280;
+      text-align: center;
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+    }
+    .about-section.about-fit {
+  max-width: 720px;
+  margin: 24px auto 40px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 24px;
+}
+
+.about-list {
+  margin: 0 0 18px;
+  padding-left: 1.25rem;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.about-list li + li {
+  margin-top: 6px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="site-header-inner">
+      <div class="site-logo">
+  <a href="index.html#top" class="site-logo-link">
+    <span class="logo-main">E Keys</span>
+    <span class="logo-tagline">web designs</span>
+  </a>
+</div>
+
+
+        <nav class="site-nav">
+          <div class="nav-links">
+            <a href="index.html#top">Home</a>
+            <a href="index.html#graduationscope">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+          </div>
+        </nav>
+
+        <a
+          href="contact.html"
+          class="btn-primary header-contact-btn"
+        >
+          Contact Us
+        </a>
+      </div>
+    </header>
+
+    <main class="about-main">
+      <section class="about-hero">
+        <div class="about-copy">
+          <p class="about-eyebrow">About Us</p>
+          <h1 class="about-title">A small studio built for small businesses</h1>
+          <p class="about-text">
+            E Keys Creative Web Design started as a way to help promote creativity. We help give small business the tools they need to make a difference in a community and in the market. This is done through clean, simple, and effective web design that helps you connect with your customers.
+          </p>
+          <p class="about-text">
+            I am Elijah, a student and web designer who cares about clear
+            communication, simple user experience, and websites that actually
+            help people find you. My focus is on small businesses in Sacramento,
+            San Jose, and Chico that want professional websites that are customized to their preferences, at a price they can afford.
+          </p>
+          <p class="about-text">
+            When we work together I listen first, then turn your story and goals
+            into a site that feels like you. The result is a custom site that
+            makes it easier for the right customers to trust and choose you.
+          </p>
+        </div>
+
+        <div class="about-photo">
+          <img src="About.jpg" alt="Elijah, founder of E Keys Creative Web Design" />
+        </div>
+      </section>
+
+   <section class="about-section about-fit">
+  <h2 class="about-section-title">Who I work best with</h2>
+
+  <p class="about-section-text">
+    I work best with owners who care about their craft and the people they serve.
+    You bring the product and story, I help bring the customers.
+  </p>
+
+  <ul class="about-list">
+    <li>Small business owners who care about their community</li>
+    <li>People who value clear, fast communication</li>
+    <li>Teams who can share honest goals, timelines, and budget</li>
+  </ul>
+
+  <p class="about-section-text">
+    If this sounds like you, I would love to hear about your business and help you
+    plan a site that fits your goals and your budget.
+  </p>
+
+  <a href="contact.html" class="btn-primary">
+    Start a project conversation
+  </a>
+</section>
+
+    </main>
+
+    <footer class="footer">
+      E Keys Creative Web Design. Serving Sacramento, San Jose, Chico and nearby cities.
+    </footer>
+  </div>
+</body>
+</html>

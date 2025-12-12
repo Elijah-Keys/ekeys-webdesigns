@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<title>Small Business Web Design in Sacramento & Chico | E Keys Web Designs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="E Keys Web Designs builds new websites and SEO for small in person businesses in Sacramento, Chico, Roseville, Rocklin, Carmichael, North Highlands and Arden Arcade."
+  />
+  <meta
+    name="keywords"
+    content="small business web design, new websites, SEO setup, website redesign, Sacramento, Chico, Roseville, Rocklin, Carmichael, North Highlands, Arden Arcade"
+  />
+  <link rel="canonical" href="https://ekeyswebdesigns.com/" />
+
+  <!-- Open Graph for social and Google -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="E Keys Web Designs | Small Business Websites and SEO" />
+  <meta
+    property="og:description"
+    content="New websites and SEO for small businesses in Sacramento, Chico and nearby cities. Custom, creative sites that help you get more customers."
+  />
+  <meta property="og:url" content="https://ekeyswebdesigns.com/" />
+  <meta property="og:image" content="https://ekeyswebdesigns.com/og-image.jpg" />
+
+  <!-- Local business schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "E Keys Web Designs",
+    "url": "https://ekeyswebdesigns.com/",
+    "description": "New websites, SEO setup and website redesigns for small businesses in Sacramento, Chico and nearby cities.",
+    "areaServed": [
+      { "@type": "Place", "name": "Sacramento, CA" },
+      { "@type": "Place", "name": "Chico, CA" },
+      { "@type": "Place", "name": "Roseville, CA" },
+      { "@type": "Place", "name": "Rocklin, CA" },
+      { "@type": "Place", "name": "Carmichael, CA" },
+      { "@type": "Place", "name": "North Highlands, CA" },
+      { "@type": "Place", "name": "Arden Arcade, CA" }
+    ]
+  }
+  </script>
+
+  <style>
+ :root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+  background-color: #f9fafb;
+
+  /* brand accent */
+  --brand-red: #4ade80;
+  --brand-red-hover: #22c55e;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #111827;
+      background-color: #f9fafb;
+    }
+html {
+  scroll-behavior: smooth;
+}
+    body {
+      margin: 0;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* content left */
+      padding: 64px 24px;
+      box-sizing: border-box;
+    }
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  /* remove any filter: blur(...) or backdrop-filter here */
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(34, 128, 28, 0.35),
+    rgba(0, 0, 0, 0.65)
+  );
+  z-index: -1;
+}
+
+
+
+
+    .hero-inner {
+      max-width: 960px;
+      width: 100%;
+      text-align: left;
+      color: white;
+    }
+
+.hero-title {
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.1;
+  margin: 0 0 20px;
+  font-weight: 800;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.55); /* helps white text sit on bright video */
+}
+
+.hero-title span#rotate-word {
+  color: var(--brand-red);
+  display: inline-block;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.55);
+}
+
+
+@media (max-width: 768px) {
+  .hero-video {
+    display: none; /* no video on mobile */
+  }
+
+  .hero {
+    background-image: url("/MobileHero.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+
+/* new classes for enter and exit */
+.rotate-enter {
+  animation: wordSlideIn 0.45s ease-out;
+}
+
+.rotate-exit {
+  animation: wordSlideOut 0.45s ease-in;
+}
+
+@keyframes wordSlideIn {
+  0% {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes wordSlideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+}
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+/* shared button base styles */
+.btn-primary,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
+}
+
+/* solid red button */
+.btn-primary {
+  background: var(--brand-red);
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* outline button */
+.btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: white;
+  background: transparent;
+}
+
+/* hover animation for both */
+.btn-primary:hover,
+.btn-ghost:hover {
+  transform: scale(1.06) rotate(-1deg);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* keep the red hover color for the primary button */
+.btn-primary:hover {
+  background: var(--brand-red-hover);
+}
+
+
+
+    .hero-tagline {
+      margin-top: 16px;
+      font-size: 13px;
+      opacity: 0.85;
+    }
+
+    .section {
+      padding: 64px 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+/* services cards section */
+.services-section .section-title {
+  text-align: left;
+  margin-bottom: 8px;
+  font-size: 32px;        /* bigger heading */
+color: var(--brand-red);   /* primary green */
+}
+.services-section {
+  max-width: none;
+  margin: 0;
+}
+.why-section {
+  max-width: none;
+  margin: 0;
+}
+.why-inner {
+  max-width: 1180px;     /* was 1040px */
+  margin: 0 auto;
+}
+
+.why-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;             /* a bit more space between text and photo */
+  align-items: stretch;   /* let the image grow with the text */
+}
+
+.why-copy {
+  flex: 1 1 55%;          /* give text a bit more width */
+  max-width: none;
+}
+
+.why-photo {
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-photo img {
+  width: 100%;
+  max-width: 520px;       /* larger image */
+  border-radius: 24px;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.22);
+  object-fit: cover;
+}
+
+
+/* mobile: stack text and image */
+@media (max-width: 768px) {
+  .why-layout {
+    flex-direction: column;
+  }
+
+  .why-photo img {
+    max-width: 100%;
+  }
+}
+
+
+.services-subtitle {
+  text-align: left;
+  max-width: 520px;
+  margin: 0 0 32px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* width so cards feel big and closer to the edges */
+.services-inner {
+  max-width: none;
+  margin: 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 18px;
+  padding: 20px 20px 22px;
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-image {
+  height: 190px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 0 0 1px rgba(229, 231, 235, 1);
+}
+
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-image span {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #f9fafb;
+  background: rgba(15, 23, 42, 0.75);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.service-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.service-text {
+  margin: 0;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 18px 20px;
+      box-shadow: 0 10px 35px rgba(15,23,42,0.08);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .footer {
+      padding: 24px;
+      font-size: 13px;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    /* Graduation Scope full width showcase */
+
+.gs-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #020617;
+}
+
+.gs-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;              /* image on top of the solid color */
+}
+
+.gs-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    circle at top left,
+    rgba(2, 6, 23, 0.25),
+    rgba(2, 6, 23, 0.65)
+  );
+}
+
+
+.gs-inner,
+.ns-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 56px 32px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.65);        /* dark panel behind text */
+  border-radius: 20px;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(2px);
+}
+
+
+
+.gs-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: blur(6px);          /* blur the screenshot */
+  transform: scale(1.06);     /* zoom a bit so blur does not show edges */
+}
+
+
+
+.gs-title,
+.ns-title {
+  font-size: clamp(34px, 5.2vw, 48px);
+  margin: 0 0 14px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.9);
+}
+
+.gs-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.gs-button:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.7);
+}
+
+/* The Nova Series full width showcase */
+.ns-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #020617;
+}
+
+.ns-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.ns-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: blur(6px);      /* same blur as Graduation Scope */
+  transform: scale(1.06); /* zoom so blur edges are hidden */
+}
+
+.ns-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    circle at top left,
+    rgba(2, 6, 23, 0.25),
+    rgba(2, 6, 23, 0.65)
+  );
+}
+
+.gs-subtitle,
+.ns-subtitle {
+  margin: 0 0 26px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(249, 250, 251, 0.97);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+}
+
+
+.ns-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.ns-button:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.7);
+}
+/* Why choose us section */
+
+.why-section .why-kicker {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #4ade80;
+  margin-bottom: 6px;
+}
+
+.why-section .section-title {
+  text-align: left;
+  margin-bottom: 22px; /* more space under "Providing Small Businesses..." */
+  font-size: 30px;
+  color: #111827;
+}
+
+
+.why-text {
+  margin: 0 0 24px;
+  max-width: 640px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+
+.why-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.why-copy {
+  flex: 1 1 300px;
+}
+
+.why-points {
+  flex: 1 1 300px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.why-point {
+  background: white;
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.why-point-title {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.why-point-text {
+  margin: 0;
+  font-size: 13px;
+  color: #4b5563;
+}
+.why-more-wrapper {
+  margin-top: 18px;
+  text-align: center; /* centers button in that white space */
+}
+
+.why-more-btn {
+  padding: 9px 22px;      /* a bit smaller than main hero buttons */
+  font-size: 13px;
+  border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .why-layout {
+    flex-direction: column;
+  }
+}
+
+/* Final call to action */
+/* Final call to action */
+
+.cta-section {
+  max-width: none;
+  margin: 0;
+  background: #ffffff;
+}
+
+.cta-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 44px;
+  border-radius: 18px;
+color: var(--brand-red);
+  text-align: center;
+}
+
+.cta-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #4ade80;
+  margin-bottom: 8px;
+}
+
+.cta-title {
+  font-size: 30px;
+  margin: 0 0 12px;
+  color: #111827;
+}
+
+.cta-text {
+  margin: 0 0 24px;
+  max-width: 540px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media (max-width: 640px) {
+  .cta-actions { 
+    flex-direction: column;
+    align-items: center; /* center button on mobile */
+  }
+}
+
+/* Header */
+/* Contact form inside CTA */
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.form-row label {
+  font-weight: 500;
+  color: #111827;
+}
+
+.form-row input,
+.form-row textarea {
+  font: inherit;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+color: var(--brand-red);
+  box-shadow: 0 0 0 1px rgba(34,128,28,0.28);
+}
+
+.site-header-inner {
+  max-width: 1180px;      /* was 1040px */
+  margin: 0 auto;
+  padding: 18px 40px;     /* was 14px 24px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.site-logo {
+  font-weight: 700;
+  font-size: 17px;        /* was 15px */
+  letter-spacing: 0.14em; /* slightly wider */
+  text-transform: uppercase;
+}
+.site-logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.site-nav .nav-links {
+  display: flex;
+  gap: 28px;              /* was 20px */
+  font-size: 15px;        /* was 13px */
+}
+
+
+.logo-main {
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #111827;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+/* subtle green underline accent */
+.logo-main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+  height: 2px;
+  background-color: #4ade80;
+  border-radius: 999px;
+}
+
+.logo-tagline {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+
+/* desktop nav links */
+.site-nav .nav-links {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+}
+
+.site-nav .nav-links a {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.site-nav .nav-links a:hover {
+  color: #111827;
+}
+
+/* header contact button, reusing btn-primary base */
+.header-contact-btn {
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* remove hover grow/rotate for header button only */
+.site-header .btn-primary:hover {
+  transform: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 640px) {
+  /* mobile: logo + contact button only */
+  .site-nav .nav-links {
+    display: none;
+  }
+
+  .site-header-inner {
+    padding: 12px 16px;
+  }
+
+  .header-contact-btn {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+}
+
+
+
+    @media (max-width: 640px) {
+      .hero-inner {
+        text-align: left;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    /* Testimonial full width showcase */
+.test-section {
+  position: relative;
+  min-height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #020617;
+}
+
+.test-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.test-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: blur(6px);
+  transform: scale(1.06);
+}
+
+.test-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    circle at top left,
+    rgba(2, 6, 23, 0.25),
+    rgba(2, 6, 23, 0.7)
+  );
+}
+
+.test-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 48px 32px 40px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(2px);
+}
+
+.test-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(248, 250, 252, 0.8);
+  margin-bottom: 10px;
+}
+
+.test-title {
+  font-size: clamp(28px, 4.5vw, 36px);
+  margin: 0 0 14px;
+  font-weight: 800;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.9);
+}
+
+.test-quote {
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(249, 250, 251, 0.96);
+  font-style: italic;
+}
+
+.test-meta {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(209, 213, 219, 0.95);
+}
+/* hide extra card images everywhere */
+.gs-mobile-image,
+.ns-mobile-image {
+  display: none;
+}
+
+/* mobile tweaks: keep blurred background, just adjust padding */
+@media (max-width: 768px) {
+  .hero-video {
+    display: none;
+  }
+
+  .gs-inner,
+  .ns-inner {
+    max-width: 380px;
+    padding: 40px 22px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 20px 55px rgba(15, 23, 42, 0.85);
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+
+  <div class="page">
+<header class="site-header">
+  <div class="site-header-inner">
+<div class="site-logo">
+  <a href="index.html#top" class="site-logo-link">
+    <span class="logo-main">E Keys</span>
+    <span class="logo-tagline">web designs</span>
+  </a>
+</div>
+
+
+    <nav class="site-nav">
+      <div class="nav-links">
+        <a href="#top">Home</a>
+        <a href="#graduationscope">Portfolio</a>
+        <a href="contact.html">Contact</a>
+         <a href="about.html">About</a>
+      </div>
+    </nav>
+
+ <a
+   href="contact.html"
+   class="btn-primary header-contact-btn"
+ >
+   Contact Us
+ </a>
+
+  </div>
+</header>
+
+    <section class="hero" id="top">
+      <!-- replace src with your real video path when ready -->
+<video
+  class="hero-video"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="auto"
+  poster="/MobileHero.jpg"  <!-- or another image you like -->
+>
+  <source src="/NevermindSmaller.mp4" type="video/mp4" />
+</video>
+
+
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-inner">
+        <h1 class="hero-title">
+          Let us create your<br />
+          <span id="rotate-word">Website</span>
+        </h1>
+
+        <div class="hero-cta">
+         <a href="contact.html" class="btn-primary">
+  Contact Us
+</a>
+
+       <a href="#graduationscope" class="btn-ghost">
+  View Portfolio
+</a>
+        </div>
+
+        <p class="hero-tagline">
+          We will review your message and respond within 24 hours.
+        </p>
+      </div>
+    </section>
+<section class="section services-section" id="services">
+  <h2 class="section-title">Our Services</h2>
+  <p class="services-subtitle">
+    Here's how we can level up your small business.
+  </p>
+
+  <div class="services-inner">
+    <div class="services-grid">
+      <!-- Card 1 -->
+      <div class="service-card">
+        <div class="service-image">
+    <img src="/Card1.jpg" alt="Website creation example" />
+          <span>New builds</span>
+        </div>
+        <h3 class="service-title">Website Creation</h3>
+        <p class="service-text">
+          You give us your ideas, we turn them into reality, or we create something new for you from scratch.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="Card2.jpg" alt="Website update example" />
+          <span>Refresh</span>
+        </div>
+        <h3 class="service-title">Website Update</h3>
+        <p class="service-text">
+          We help update, modify, or change your existing website so it feels current, works better, and is easier to use.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="Card3.jpg" alt="SEO and analytics example" />
+          <span>Search and data</span>
+        </div>
+        <h3 class="service-title">SEO and Analytics</h3>
+        <p class="service-text">
+          We help create and maintain SEO for your website so you show up in Google and AI searches. We set up and read analytics so you can see what users visit and what they are interested in.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gs-section" id="graduationscope">
+  <div class="gs-background">
+    <picture>
+      <source srcset="/GraduationScopeMobile.png" media="(max-width: 768px)" />
+      <img
+        src="/GraduationScope.png"
+        alt="Graduation Scope homepage preview"
+        loading="lazy"
+      />
+    </picture>
+  </div>
+
+  <div class="gs-overlay"></div>
+
+  <div class="gs-inner">
+    <!-- you can delete this img if you want, we hide it in CSS -->
+    <img
+      class="gs-mobile-image"
+      src="/GraduationScopeMobile.png"
+      alt="Graduation Scope mobile preview"
+      loading="lazy"
+    />
+
+    <h2 class="gs-title">Graduation Scope</h2>
+    <p class="gs-subtitle">
+      This website was built to help college students pick their classes easier, reaching 2000 plus students within a few months of launch.
+    </p>
+    <a
+      href="https://graduationscope.com"
+      class="gs-button"
+      target="_blank"
+      rel="noopener"
+    >
+      See details
+    </a>
+  </div>
+</section>
+
+
+<section class="ns-section">
+  <div class="ns-background">
+    <picture>
+      <source srcset="/NovaNovelsMobile.png" media="(max-width: 768px)" />
+      <img
+        src="NovaNovels.png"
+        alt="The Nova Series homepage preview"
+        loading="lazy"
+      />
+    </picture>
+  </div>
+
+  <div class="ns-overlay"></div>
+
+  <div class="ns-inner">
+    <!-- can be removed, we hide in CSS -->
+    <img
+      class="ns-mobile-image"
+      src="/NovaNovelsMobile.png"
+      alt="The Nova Series mobile preview"
+      loading="lazy"
+    />
+
+    <h2 class="ns-title">The Nova Series</h2>
+    <p class="ns-subtitle">
+      A young author who needed a website to showcase his book in order to get it published.
+      In case you were wondering, it did!
+    </p>
+    <a
+      href="https://thenovaseries.com"
+      class="ns-button"
+      target="_blank"
+      rel="noopener"
+    >
+      See details
+    </a>
+  </div>
+</section>
+
+
+<section class="section why-section" id="why">
+  <div class="why-inner">
+    <div class="why-layout">
+   <div class="why-copy">
+  <p class="why-kicker">Our Mission</p>
+  <h2 class="section-title">Helping Small Businesses Stand Out</h2>
+
+  <p class="why-text">
+    As a small business ourselves, we understand the advantages we have over
+    larger corporations, like being more adaptable, quicker, and more
+    focused on connecting with each customer.
+  </p>
+  <p class="why-text">
+    Our goal is to support creative and unique businesses by providing them
+    with our own creative work to increase sales and online presence. We want
+    your knowledge and understanding of your field to mesh with our digital
+    skills so we can flip the market upside down.
+  </p>
+  <p class="why-text">
+    Because we are also a small business, we can cater to your needs, fully
+    customize your site, and genuinely care about you and your success.
+  </p>
+
+  <!-- new button -->
+  <div class="why-more-wrapper">
+    <a href="about.html" class="btn-primary why-more-btn">
+      More about us
+    </a>
+  </div>
+</div>
+
+
+      <div class="why-photo">
+        <img src="Elijah.jpg" alt="Elijah, founder of E Keys Creative Web Design" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="test-section" id="testimonials">
+  <div class="test-background">
+  <img
+  src="NovaAuthor.jpg"
+  alt="Congolese and Ethiopian Chico State author of The Nova Series"
+/>
+
+  </div>
+
+  <div class="test-overlay"></div>
+
+  <div class="test-inner">
+    <p class="test-eyebrow">Client testimonial</p>
+    <h2 class="test-title">“Elijah turned my book into a world I can walk through.”</h2>
+    <p class="test-quote">
+      A quick and easy process, I answered a few questions, and let Elijah get to work. When I first loaded the homepage I literally just stared at
+      it. It felt like my book finally existed in real life.
+    </p>
+    <p class="test-meta">
+      - Author of The Nova Series
+    </p>
+  </div>
+</section>
+
+
+<section class="section cta-section" id="contact">
+  <div class="cta-inner">
+    <p class="cta-eyebrow">Next step</p>
+    <h2 class="cta-title">Ready to talk about your website?</h2>
+    <p class="cta-text">
+      If you feel we are speaking your language, the next step is simple. Tell us about your business and what you want your website to do, and we will map out a clear first version for you.
+    </p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-primary">
+        Go to contact form
+      </a>
+    </div>
+  </div>
+</section>
+
+<div id="faq"></div>
+
+    <footer class="footer">
+      E Keys Creative Web Design. Serving Sacramento, San Jose, Chico and nearby cities.
+    </footer>
+  </div>
+
+<script>
+  const words = ["Website", "Presence", "Showcase", "Studio", "Identity"];
+  let index = 0;
+  const span = document.getElementById("rotate-word");
+
+  function cycleWord() {
+    // first animate the current word out to the right
+    span.classList.remove("rotate-enter", "rotate-exit");
+    span.classList.add("rotate-exit");
+
+    span.addEventListener(
+      "animationend",
+      () => {
+        // after exit finishes, change the word
+        index = (index + 1) % words.length;
+        span.textContent = words[index];
+
+        // trigger enter from the left
+        span.classList.remove("rotate-exit");
+        void span.offsetWidth; // force reflow
+        span.classList.add("rotate-enter");
+      },
+      { once: true }
+    );
+  }
+
+  // first word slides in from the left on load
+  span.classList.add("rotate-enter");
+
+  // run the cycle every 3000 ms
+  setInterval(cycleWord, 3000);
+</script>
+<script>
+  window.addEventListener("load", function () {
+    const video = document.querySelector(".hero-video");
+    if (!video) return;
+
+    video.muted = true;
+
+    const playPromise = video.play();
+    if (playPromise && typeof playPromise.then === "function") {
+      playPromise.catch(function () {
+        console.warn("Hero video autoplay was blocked by the browser.");
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

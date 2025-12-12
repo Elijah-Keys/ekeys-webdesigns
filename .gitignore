@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.vite/
+raw-assets/
+.DS_Store
