@@ -27,24 +27,37 @@
   <meta property="og:image" content="https://ekeyswebdesigns.com/og-image.jpg" />
 
   <!-- Local business schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "E Keys Web Designs",
-    "url": "https://ekeyswebdesigns.com/",
-    "description": "New websites, SEO setup and website redesigns for small businesses in Sacramento, Chico and nearby cities.",
-    "areaServed": [
-      { "@type": "Place", "name": "Sacramento, CA" },
-      { "@type": "Place", "name": "Chico, CA" },
-      { "@type": "Place", "name": "Roseville, CA" },
-      { "@type": "Place", "name": "Rocklin, CA" },
-      { "@type": "Place", "name": "Carmichael, CA" },
-      { "@type": "Place", "name": "North Highlands, CA" },
-      { "@type": "Place", "name": "Arden Arcade, CA" }
-    ]
-  }
-  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://ekeyswebdesigns.com/#localbusiness",
+  "name": "E Keys Creative Web Design",
+  "url": "https://ekeyswebdesigns.com/",
+  "telephone": "+1-916-549-5020",
+  "email": "eli9keys@gmail.com",
+  "priceRange": "$",
+  "description": "E Keys Creative Web Design helps small businesses in Sacramento with web design, website creation, website maintenance, web hosting, online stores, and local SEO.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sacramento",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Sacramento, CA" }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ]
+}
+</script>
+
 
   <style>
  :root {
@@ -53,7 +66,7 @@
   background-color: #f9fafb;
 
   /* brand accent */
-  --brand-red: #4ade80;
+  --brand-red: #00b37e;
   --brand-red-hover: #22c55e;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: #111827;
@@ -129,17 +142,6 @@ html {
 }
 
 
-@media (max-width: 768px) {
-  .hero-video {
-    display: none; /* no video on mobile */
-  }
-
-  .hero {
-    background-image: url("/MobileHero.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-}
 
 
 /* new classes for enter and exit */
@@ -568,7 +570,7 @@ color: var(--brand-red);   /* primary green */
   font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #4ade80;
+  color: #00b37e;
   margin-bottom: 6px;
 }
 
@@ -664,7 +666,7 @@ color: var(--brand-red);
   font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #4ade80;
+  color: #00b37e;
   margin-bottom: 8px;
 }
 
@@ -712,7 +714,7 @@ color: var(--brand-red);
   font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #4ade80;
+  color: #00b37e;
   margin: 0 0 8px;
 }
 
@@ -860,7 +862,7 @@ color: var(--brand-red);
   bottom: 0;
   width: 40%;
   height: 2px;
-  background-color: #4ade80;
+  background-color: #00b37e;
   border-radius: 999px;
 }
 
@@ -1029,9 +1031,52 @@ color: var(--brand-red);
     box-shadow: 0 20px 55px rgba(15, 23, 42, 0.85);
   }
 }
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+/* Make these match "Our Services" heading (size + green) */
+.cta-eyebrow,
+.longcopy-kicker,
+.why-section .why-kicker {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--brand-red);
+  letter-spacing: 0;
+  text-transform: none;
+  margin: 0 0 8px;
+}
 
+/* Portfolio heading styling (match the 32px green style) */
+.portfolio-intro {
+  padding: 36px 24px 18px;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.portfolio-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--brand-red);
+}
+.services-portfolio-label {
+  margin: 14px 0 0;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--brand-red);
+  text-align: left;
+}
 
   </style>
+
+
 </head>
 <body>
 
@@ -1068,17 +1113,12 @@ color: var(--brand-red);
 
     <section class="hero" id="top">
       <!-- replace src with your real video path when ready -->
-<video
-  class="hero-video"
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="auto"
-  poster="/MobileHero.jpg"
->
-  <source src="/NevermindSmaller.mp4" type="video/mp4" />
-</video>
+<img
+  class="hero-image"
+  src="/MobileHero.jpg"
+  alt="E Keys Creative Web Design hero"
+/>
+
 
 
 
@@ -1153,6 +1193,10 @@ color: var(--brand-red);
   </div>
 </section>
 
+<!-- Portfolio heading -->
+<section class="section portfolio-intro">
+  <h2 class="portfolio-title">Our Portfolio</h2>
+</section>
 
 <section class="gs-section" id="graduationscope">
   <div class="gs-background">
@@ -1198,7 +1242,7 @@ color: var(--brand-red);
     <picture>
       <source srcset="/NovaNovelsMobile.png" media="(max-width: 768px)" />
       <img
-        src="NovaNovels.png"
+        src="NovaNovels2.png"
         alt="The Nova Series homepage preview"
         loading="lazy"
       />
@@ -1275,7 +1319,7 @@ color: var(--brand-red);
 <section class="test-section" id="testimonials">
   <div class="test-background">
   <img
-  src="NovaAuthor.jpg"
+  src="NovaAuthor2.png"
   alt="Congolese and Ethiopian Chico State author of The Nova Series"
 />
 
@@ -1412,6 +1456,7 @@ color: var(--brand-red);
     </div>
   </div>
 </section>
+
     <footer class="footer">
       E Keys Creative Web Design. Serving Sacramento, San Jose, Chico and nearby cities.
     </footer>
@@ -1449,21 +1494,7 @@ color: var(--brand-red);
   // run the cycle every 3000 ms
   setInterval(cycleWord, 3000);
 </script>
-<script>
-  window.addEventListener("load", function () {
-    const video = document.querySelector(".hero-video");
-    if (!video) return;
 
-    video.muted = true;
-
-    const playPromise = video.play();
-    if (playPromise && typeof playPromise.then === "function") {
-      playPromise.catch(function () {
-        console.warn("Hero video autoplay was blocked by the browser.");
-      });
-    }
-  });
-</script>
 
 </body>
 </html>
